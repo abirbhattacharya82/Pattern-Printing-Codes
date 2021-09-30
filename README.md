@@ -1,4 +1,4 @@
-## Pattern Printing.
+##  Pattern Printing
 ![](https://img.shields.io/twitter/follow/IamAbir82?color=Black&label=Abir%20Bhattacharya&logo=Twitter&logoColor=Blue&style=flat-square)
 ![](https://img.shields.io/github/forks/abirbhattacharya82/Casino?color=green&label=Forks&logo=github&logoColor=white&style=plastic)
 ![](https://img.shields.io/github/stars/abirbhattacharya82/Casino?color=green&label=Stars&logo=github&logoColor=white&style=plastic)
