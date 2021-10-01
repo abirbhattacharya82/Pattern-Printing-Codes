@@ -16,5 +16,5 @@ def pypart(n):
         print("\r")
  
 # Driver Code
-n = 5
+n = int(input())
 pypart(n)
