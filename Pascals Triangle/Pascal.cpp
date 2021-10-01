@@ -1,31 +1,44 @@
-// C++ program for Pascal’s Triangle
-
-// A O(n^2) time and O(1) extra space
-// function for Pascal's Triangle
-#include <bits/stdc++.h>
+#include <iostream>
 using namespace std;
+ 
+int binomialCoeff(int n, int k);
+ 
+// Function to print first
+// n lines of Pascal's
+// Triangle
 void printPascal(int n)
 {
-	
-for (int line = 1; line <= n; line++)
+    // Iterate through every line and
+    // print entries in it
+    for (int line = 0; line < n; line++)
+    {
+        // Every line has number of
+        // integers equal to line
+        // number
+        for (int i = 0; i <= line; i++)
+            cout <<" "<< binomialCoeff(line, i);
+        cout <<"\n";
+    }
+}
+ 
+int binomialCoeff(int n, int k)
 {
-	int C = 1; // used to represent C(line, i)
-	for (int i = 1; i <= line; i++)
-	{
-		
-		// The first value in a line is always 1
-		cout<< C<<" ";
-		C = C * (line - i) / i;
-	}
-	cout<<"\n";
+    int res = 1;
+    if (k > n - k)
+    k = n - k;
+    for (int i = 0; i < k; ++i)
+    {
+        res *= (n - i);
+        res /= (i + 1);
+    }
+     
+    return res;
 }
-}
-
+ 
+// Driver program
 int main()
 {
-	int n;
-    cout<<"Enter a number:";
-    cin>> n;
-	printPascal(n);
-	return 0;
+    int n = 7;
+    printPascal(n);
+    return 0;
 }
