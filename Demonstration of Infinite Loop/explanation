@@ -1,0 +1,15 @@
+In the above syntax the condition pass is 1 (non zero integer specify true condition), which means the condition always true and the runs for infinite times. similarly we can also see the below example :-
+
+#include <stdio.h>  
+int main()  
+{  
+  int i=0;  
+  while(1)  
+  {  
+      i++;   
+      printf("i is :%d",i);  
+  }  
+return 0;  
+}  
+
+In the above code, we have defined a while loop, which runs infinite times as it does not contain any condition. The value of 'i' will be updated an infinite number of times. when we put '1' inside the loop condition. we know that any non-zero integer represents the true condition while '0' represents the false condition.
