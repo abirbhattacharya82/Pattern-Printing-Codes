@@ -6,15 +6,12 @@ def printFibonacciNumbers(n):
     b = 1
     if (n < 1):
         return
-    print(a, end=" ")
-    for x in range(1, n):
-        print(b, end=" ")
-        c = a + b
-        a = b
-        b = c
+    for x in range(n):
+        print(a, end=" ")
+        a, b = b, a+b
  
  
 # Driver code
 if __name__ == "__main__":
-    n = int(input("Enter N"))
+    n = int(input("Enter N: "))
     printFibonacciNumbers(n)
