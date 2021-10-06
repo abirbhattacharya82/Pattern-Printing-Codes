@@ -1,42 +1,48 @@
-//Implementation of selection sort
-#include <bits/stdc++.h>
+#include <iostream>
 using namespace std;
-
-void swap(int *x, int *y)
+ 
+void swap(int *a, int *b)
 {
-	int temp = *x;
-	*x = *y;
-	*y = temp;
+   int temp = *a;
+   *a = *b;
+   *b = temp;
 }
-
+ 
 void selectionSort(int arr[], int n)
 {
-	int i, j, min_idx;
-
-	for (i = 0; i < n-1; i++)
-	{
-		min_idx = i;
-		for (j = i+1; j < n; j++)
-		if (arr[j] < arr[min_idx])
-			min_idx = j;
-		swap(&arr[min_idx], &arr[i]);
-	}
+   int min_index;
+  
+   for (int i = 0; i < n-1; i++)
+   {
+       min_index = i;
+       for (int j = i+1; j < n; j++)
+       {
+           if (arr[j] < arr[min_index])
+               min_index = j;
+       }
+       swap(&arr[min_index], &arr[i]);
+   }
 }
-
+ 
+void printArray(int arr[], int n)
+{
+   for (int i = 0; i < n; i++)
+       cout << arr[i] << " ";
+   cout << "\n";
+}
+ 
 int main()
 {
-    int i,n;
-	cout<<"Enter number of elements";
-    cin>>n;
-    int arr[n];
-    cout<<"Enter array elements";
-    for (i=0; i < n; i++)
-		cin>>arr[i];
-	selectionSort(arr, n);
-	cout << "Sorted array: \n";
-	for (i=0; i <n; i++)
-		cout << arr[i] << " ";
-	return 0;
+   int arr[] = {6, 3, 8, 9, 5};
+   int n = sizeof(arr)/sizeof(arr[0]);
+  
+   cout << "Given Array: ";
+   printArray(arr, n);
+  
+   selectionSort(arr, n);
+  
+   cout << "Sorted Array: ";
+   printArray(arr, n);
+  
+   return 0;
 }
-
-//~pavithra-064
